@@ -34,6 +34,21 @@
           pElementPrice.innerHTML = item.price;
           divElement.appendChild(pElementPrice);
           carrosel.appendChild(divElement);
+
+         /*
+          let pElementPriceOldPrice = document.createElement('p');
+          pElementPriceOldPrice.innerHTML = item.oldPrice;
+
+            if (pElementPriceOldPrice != null){
+                divElement.appendChild(pElementOldPrice);
+                carrosel.appendChild(divElement);
+            }
+            */
+          let pElementProductInfo = document.createElement('p');
+          pElementProductInfo.innerHTML = item.productInfo.paymentConditions;
+          divElement.appendChild(pElementProductInfo);
+          carrosel.appendChild(divElement); 
+
       }
     }
 </script>
