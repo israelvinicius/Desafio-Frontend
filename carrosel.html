@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/carrosel.css" rel="stylesheet">
+    <title>israel</title>
+</head>
+<body>
+
+    <div id="carrossel">
+       
+    </div>
+
+<script>
+    let carrosel = document.getElementById('carrossel')
+
+    function X(response){
+      console.log(response);
+
+      for (let i=0; i< response.data.recommendation.length; i++){
+          let item = response.data.recommendation[i];
+
+          let divElement = document.createElement('div');
+          let imgElement = document.createElement('img');
+          imgElement.src = item.imageName;
+          divElement.appendChild(imgElement); 
+          
+          let pElementName = document.createElement('p');
+          pElementName.innerHTML = item.name;
+          divElement.appendChild(pElementName);
+          carrosel.appendChild(divElement);
+
+          let pElementPrice = document.createElement('p');
+          pElementPrice.innerHTML = item.price;
+          divElement.appendChild(pElementPrice);
+          carrosel.appendChild(divElement);
+      }
+    }
+</script>
+<script src="http://roberval.chaordicsystems.com/challenge/challenge.json?callback=X"></script>
+</body>
+</html>
+
+
