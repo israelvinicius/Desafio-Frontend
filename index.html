@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="css/carrossel.css" rel="stylesheet">
+    <link href="./css/carrossel.css" rel="stylesheet">
     <title>israel</title>
 </head>
 <body>
@@ -22,6 +22,7 @@
 
           let ulElement = document.createElement('ul');
           ulElement.id = item.businessId;
+          ulElement.style = "list-style-type: none";
           let imgElement = document.createElement('img');
           imgElement.src = item.imageName;
           ulElement.appendChild(imgElement); 

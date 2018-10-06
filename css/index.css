@@ -1,0 +1,26 @@
+strong {
+    color:	#DC143C;
+}
+ul {
+    list-style-type: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+#carrossel {
+    width: 180px;
+    height: 300px;
+    margin: 150px auto;
+    background-color: #ddd;
+}
+ul {
+    width: 180px;
+    height: 300px;
+    border: solid 1px #000;
+    overflow: hidden;
+}
+img li {
+    display: flex;
+    width: 1000%;
+}
