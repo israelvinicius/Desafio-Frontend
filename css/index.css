@@ -9,18 +9,18 @@ ul {
     padding: 0;
 }
 #carrossel {
-    width: 180px;
+    width: 200px;
     height: 300px;
     margin: 150px auto;
     background-color: #ddd;
+    display:flex;
+    width: 160%;
 }
 ul {
-    width: 180px;
+    width: 200px;
     height: 300px;
     border: solid 1px #000;
     overflow: hidden;
+    text-align: center;
 }
-img li {
-    display: flex;
-    width: 1000%;
-}
+
