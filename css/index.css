@@ -5,7 +5,7 @@ strong {
     list-style-type: none;
     width: 260px;
     height: 300px;
-    border: solid 1px #000;
+    /*border: solid 1px #000;*/
     text-align: center;
 }
 * {
@@ -19,6 +19,9 @@ strong {
     background-color: white;
     display:flex;
     width: 2000px;
+    left: -2289px;
+    margin-left: 1289px;
+    position: relative;
 }
 .container-carrossel{
     width: 1000px;
@@ -50,6 +53,9 @@ strong {
 .container{
     margin-left: auto;
     margin-right: auto;
+}
+.detail{
+    color: #DC143C;
 }
 
 
