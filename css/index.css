@@ -1,26 +1,55 @@
 strong {
     color:	#DC143C;
 }
-ul {
+.product {
     list-style-type: none;
+    width: 260px;
+    height: 300px;
+    border: solid 1px #000;
+    text-align: center;
 }
 * {
     margin: 0;
     padding: 0;
 }
 #carrossel {
-    width: 200px;
-    height: 300px;
-    margin: 150px auto;
-    background-color: #ddd;
-    display:flex;
-    width: 160%;
-}
-ul {
-    width: 200px;
-    height: 300px;
-    border: solid 1px #000;
     overflow: hidden;
-    text-align: center;
+    height: 350px;
+    margin: 150px auto;
+    background-color: white;
+    display:flex;
+    width: 2000px;
 }
+.container-carrossel{
+    width: 1000px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+.next-carrossel{
+    background: url(../img/sprite-setas.png) no-repeat;
+    width: 18px;
+    height: 18px;
+    margin-left: -8px;
+    background-position: 0 -28px;
+
+    position: absolute;
+    top: 290px;
+    right: 137px;
+}
+.back-carrossel{
+    background: url(../img/sprite-setas.png) no-repeat;
+    width: 18px;
+    height: 18px;
+    margin-left: -8px;
+    position: absolute;
+    top: 292px;
+    /* right: 1187px; */
+    left: 150px;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 

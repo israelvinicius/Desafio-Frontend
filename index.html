@@ -7,9 +7,15 @@
 </head>
 <body>
 
-    <div id="carrossel">
-       
+    <div class="container">
+        <span class="back-carrossel" onclick=""></span>
+        <div class="container-carrossel">
+                <ul id="carrossel"></ul>
+        </div>
+        <span class="next-carrossel" onclick=""></span>
     </div>
+    
+
 
 <script>
     let carrosel = document.getElementById('carrossel')
@@ -20,38 +26,19 @@
       for (let i=0; i< response.data.recommendation.length; i++){
           let item = response.data.recommendation[i];
 
-          let ulElement = document.createElement('ul');
-          ulElement.id = item.businessId;
-          ulElement.style = "list-style-type: none";
-          let imgElement = document.createElement('img');
-          imgElement.src = item.imageName;
-          ulElement.appendChild(imgElement); 
-          
-          let liElementName = document.createElement('li');
-          liElementName.innerHTML = item.name;
-          ulElement.appendChild(liElementName);
-          carrosel.appendChild(ulElement);
-
-          let por = "<strong>Por: <strong/>";
-          let liElementPrice = document.createElement('li');
-          liElementPrice.innerHTML = por;
-          liElementPrice.innerHTML += item.price;
-          ulElement.appendChild(liElementPrice);
-          carrosel.appendChild(ulElement);
-
-          let liElementProductInfo = document.createElement('li');
-          liElementProductInfo.innerHTML = item.productInfo.paymentConditions;
-          ulElement.appendChild(liElementProductInfo);
-          carrosel.appendChild(ulElement); 
-
-            if (item.oldPrice != null){
-                let de = "<strong>de <strong/>";
-                let liElementOldPrice = document.createElement('li');
-                liElementOldPrice.innerHTML = de;
-                liElementOldPrice.innerHTML += item.oldPrice;
-                ulElement.appendChild(liElementOldPrice);
-                carrosel.appendChild(ulElement);
-            }
+            carrosel.innerHTML += `
+            <li id="${item.businessId}" class="product">
+                <img src="${item.imageName}" />
+                <div>${item.name}</div>
+                <div>
+                       ${item.oldPrice ? "<strong>Por: </strong>"+ item.oldPrice : ''}
+                </div>
+                <div>
+                    <strong>de </strong> ${item.price}
+                </div>
+                <div>${item.productInfo.paymentConditions}</div>
+            </li>
+            `;
       }
     }
 </script>
