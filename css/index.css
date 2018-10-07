@@ -1,17 +1,26 @@
-strong {
-    color:	#DC143C;
+
+* {
+    margin: 0;
+    padding: 0;
 }
 .product {
     list-style-type: none;
     width: 260px;
     height: 300px;
-    /*border: solid 1px #000;*/
     text-align: center;
+    padding: 15px;
 }
-* {
-    margin: 0;
-    padding: 0;
+
+.product a {
+    color: inherit;
+    text-decoration:none;
 }
+
+.product:hover {
+    background-color:rgb(204, 230, 255,0.3);
+    
+}
+
 #carrossel {
     overflow: hidden;
     height: 350px;
@@ -19,7 +28,7 @@ strong {
     background-color: white;
     display:flex;
     width: 2000px;
-    left: -2289px;
+    left: -1289px;
     margin-left: 1289px;
     position: relative;
 }
@@ -29,33 +38,45 @@ strong {
     margin-left: auto;
     margin-right: auto;
 }
-.next-carrossel{
+
+.cursor-carrossel {
     background: url(../img/sprite-setas.png) no-repeat;
     width: 18px;
     height: 18px;
     margin-left: -8px;
-    background-position: 0 -28px;
 
     position: absolute;
+    cursor: pointer;
+}
+
+.cursor-carrossel.next-carrossel{
+    background-position: 0 -28px;
     top: 290px;
     right: 137px;
 }
-.back-carrossel{
-    background: url(../img/sprite-setas.png) no-repeat;
-    width: 18px;
-    height: 18px;
-    margin-left: -8px;
-    position: absolute;
+
+.cursor-carrossel.back-carrossel{
     top: 292px;
-    /* right: 1187px; */
     left: 150px;
 }
+
 .container{
     margin-left: auto;
     margin-right: auto;
 }
-.detail{
+.price-color {
     color: #DC143C;
+    font-weight: bold;
+}
+.oldPrice-color{
+    font-weight: bold;
 }
 
+.bold-price {
+    font-weight: bold;
+}
+
+strong.price {
+    font-size: 21px;
+}
 
