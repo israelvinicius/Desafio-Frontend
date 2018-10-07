@@ -1,0 +1,20 @@
+{
+  "name": "vitrine",
+  "version": "1.0.0",
+  "description": "Projeto de estagio chaordic",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/israelvinicius/Desafio-Frontend.git"
+  },
+  "author": "Israel Vinicius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/israelvinicius/Desafio-Frontend/issues"
+  },
+  "homepage": "https://github.com/israelvinicius/Desafio-Frontend#readme"
+}
